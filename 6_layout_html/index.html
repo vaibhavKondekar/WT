@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with CSS</title>
+    <style>
+        /* Resetting default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling for the body */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f3;
+            color: #444;
+        }
+
+        /* Header section */
+        header {
+            background-color: #005f99;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Flexbox layout for the main content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        /* Sidebar (Fixed width) */
+        .sidebar {
+            flex: 1 1 280px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-right: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Content area (Responsive width) */
+        .content {
+            flex: 3 1 600px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer section */
+        footer {
+            background-color: #005f99;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Grid layout for content cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Individual content card */
+        .card {
+            background-color: #e0f7fa;
+            border: 1px solid #005f99;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Explore Our Website</h1>
+        <p>A Modern Layout Using Flexbox and Grid</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <section class="content">
+            <h2>Featured Articles</h2>
+            <p>Discover our latest articles and posts in various topics.</p>
+
+            <!-- Grid layout for content cards -->
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Article 1</h3>
+                    <p>A brief description of article 1.</p>
+                </div>
+                <div class="card">
+                    <h3>Article 2</h3>
+                    <p>A brief description of article 2.</p>
+                </div>
+                <div class="card">
+                    <h3>Article 3</h3>
+                    <p>A brief description of article 3.</p>
+                </div>
+                <div class="card">
+                    <h3>Article 4</h3>
+                    <p>A brief description of article 4.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+</body>
+</html>

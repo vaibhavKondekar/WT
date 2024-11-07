@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background for a modern look */
+    color: #FFD700; /* Gold/yellow text color */
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #FFD700; /* Yellow background */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #000000; /* Black text for contrast */
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333333; /* Darker shade on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('gym.jpg');
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFD700; /* Gold/yellow text color */
+    margin-top: 60px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1E1E1E; /* Dark background for sections */
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold/yellow text color */
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Trainers Section */
+.trainer-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trainer-card {
+    background-color: #333333; /* Dark gray for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.trainer-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.trainer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold/yellow text color */
+}
+
+/* Facilities Section */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.facility-item {
+    text-align: center;
+    background-color: #333333; /* Dark gray for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.facility-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.facility-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1E1E1E; /* Dark background for Contact section */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

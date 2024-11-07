@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Gym Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Smooth scrolling for anchor navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #e0f7fa; /* Light teal background */
+            color: #004d40; /* Dark teal text color */
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #00796b; /* Teal background */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* White text for contrast */
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004d40; /* Darker teal on hover */
+            color: #ffffff; /* White text on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('gym2.avif') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff; /* White text color */
+            position: relative;
+            margin-top: 60px; /* To offset the fixed navigation bar */
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            margin: 20px 0; /* Space between sections */
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00796b; /* Teal text color */
+        }
+
+        section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Trainer and Facility Grids */
+        .trainer-grid, .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .trainer-card, .facility-item {
+            background: #f1f8e9; /* Light green for contrast */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .trainer-card:hover, .facility-item:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .trainer-card img, .facility-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #ffffff; /* White background for Contact section */
+            padding: 40px 20px;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #00796b; /* Teal background */
+            color: #ffffff; /* White text */
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#trainers">Our Trainers</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Our Gym</h1>
+            <p>Achieve Your Fitness Goals with Us</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a state-of-the-art gym offering a wide range of fitness services to help you stay healthy and fit.</p>
+        <img src="about1.jpg" alt="About Us" style="max-width: 100%; border-radius: 10px;">
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>Personal Training</li>
+            <li>Group Classes</li>
+            <li>Nutrition Counseling</li>
+            <li>Yoga and Meditation</li>
+        </ul>
+    </section>
+
+    <!-- Our Trainers Section -->
+    <section id="trainers">
+        <h2>Our Trainers</h2>
+        <div class="trainer-grid">
+            <div class="trainer-card">
+                <img src="trainer1.jpg" alt="Trainer 1">
+                <h3>John Doe</h3>
+                <p>Certified Personal Trainer</p>
+            </div>
+            <div class="trainer-card">
+                <img src="trainer2.jpg" alt="Trainer 2">
+                <h3>Jane Smith</h3>
+                <p>Yoga Instructor</p>
+            </div>
+            <div class="trainer-card">
+                <img src="trainer3.jpg" alt="Trainer 3">
+                <h3>Mike Johnson</h3>
+                <p>Nutrition Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities">
+        <h2>Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility-item">
+                <img src="eqp.jpg" alt="Facility 1">
+                <p>State-of-the-art Equipment</p>
+            </div>
+            <div class="facility-item">
+                <img src="eqp1.jpg" alt="Facility 2">
+                <p>Spacious Workout Area</p>
+            </div>
+            <div class="facility-item">
+                <img src="eqp3.jpg" alt="Facility 3">
+                <p>Locker Rooms</p>
+            </div>
+            <div class="facility-item">
+                <img src="eqp2.jpg" alt="Facility 4">
+                <p>Sauna & Steam Rooms</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@ourgym.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Our Gym. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

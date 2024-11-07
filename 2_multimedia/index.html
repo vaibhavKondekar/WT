@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Multimedia Showcase</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2a9d8f;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .media-section {
+            margin: 30px 0;
+        }
+        .media-section img, .media-section video, .media-section iframe {
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        audio {
+            display: block;
+            margin: 10px auto;
+        }
+        .description {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Interactive Multimedia Showcase</h1>
+
+        <!-- Image Section -->
+        <div class="media-section">
+            <h2>Stunning Landscape Image</h2>
+            <p class="description">Take a moment to appreciate this beautiful landscape:</p>
+            <img src="landscape.avif" alt="Beautiful landscape" width="600" height="400">
+        </div>
+
+        <!-- Audio Section -->
+        <div class="media-section">
+            <h2>Relaxing Audio Track</h2>
+            <p class="description">Listen to this calming melody and unwind:</p>
+            <audio controls>
+                <source src="relaxing-tune.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Video Section -->
+        <div class="media-section">
+            <h2>Scenic Video Clip</h2>
+            <p class="description">Enjoy this video of a breathtaking scenic view:</p>
+            <video width="600" height="400" controls>
+                <source src="scenic-view.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+
+        <!-- YouTube Video Section -->
+        <div class="media-section">
+            <h2>YouTube Video Embed</h2>
+            <p class="description">Here’s an embedded YouTube video to watch:</p>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/k7ELO356Npo"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    
+        </div>
+    </div>
+
+</body>
+</html>

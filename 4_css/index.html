@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Styled Web Page</title>
+    <style>
+        /* Importing a modern font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* CSS for body */
+        body {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* CSS for headings */
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 2.8em;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #444;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        /* CSS for paragraphs */
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* CSS for links */
+        a {
+            color: #ff7e5f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* CSS for images */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CSS for buttons */
+        button {
+            background-color: #ff7e5f;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #eb593e;
+            transform: translateY(-3px);
+        }
+
+        /* CSS for lists */
+        ul {
+            list-style-type: circle;
+            padding-left: 20px;
+        }
+
+        /* CSS for card-like sections */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* CSS for a responsive layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container div {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .container div {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Modern Styled Web Page</h1>
+
+    <!-- Card for content -->
+    <div class="card">
+        <h2>This is a Subheading</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+        <p>For more information, visit <a href="#">this link</a>.</p>
+    </div>
+
+    <!-- Image with CSS in a card -->
+    <div class="card">
+        <h2>Image Example</h2>
+        <img src="https://via.placeholder.com/600x300" alt="Example Image">
+    </div>
+
+    <!-- Button in a card -->
+    <div class="card">
+        <h2>Button Example</h2>
+        <button>Click Me</button>
+    </div>
+
+    <!-- Unordered List in a card -->
+    <div class="card">
+        <h2>Unordered List Example</h2>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ul>
+    </div>
+
+    <!-- Box with border and background in a card -->
+    <div class="card">
+        <h2>Box with Border</h2>
+        <div>
+            This is a box with padding, border, and background color.
+        </div>
+    </div>
+
+    <!-- Responsive layout example in a card -->
+    <div class="card">
+        <h2>Responsive Layout</h2>
+        <div class="container">
+            <div style="background-color: #f0f8ff;">Column 1</div>
+            <div style="background-color: #d9f1ff;">Column 2</div>
+            <div style="background-color: #b3e7ff;">Column 3</div>
+        </div>
+    </div>
+
+</body>
+</html>
